@@ -1,0 +1,89 @@
+version: '3.8'
+
+services:
+  # Frontend React Application
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_BASE_URL=http://localhost:9000/api/v1
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - crps-network
+
+  # Backend Scala Application
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "9000:9000"
+    environment:
+      - CASSANDRA_HOSTS=cassandra
+      - CASSANDRA_PORT=9042
+      - CASSANDRA_KEYSPACE=course_risk_prediction
+      - JWT_SECRET=your-secret-key-change-in-production
+    depends_on:
+      - cassandra
+    volumes:
+      - ./backend:/app
+    networks:
+      - crps-network
+
+  # Cassandra Database
+  cassandra:
+    image: cassandra:4.1
+    ports:
+      - "9042:9042"
+      - "7000:7000"
+      - "7001:7001"
+      - "9160:9160"
+    environment:
+      - CASSANDRA_CLUSTER_NAME=CRPSCluster
+      - CASSANDRA_DC=datacenter1
+      - CASSANDRA_RACK=rack1
+    volumes:
+      - cassandra_data:/var/lib/cassandra
+      - ./cassandra/init:/docker-entrypoint-initdb.d
+    networks:
+      - crps-network
+
+  # Redis for Caching (Optional)
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - crps-network
+
+  # Nginx Reverse Proxy (Optional)
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/ssl:/etc/nginx/ssl
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - crps-network
+
+volumes:
+  cassandra_data:
+  redis_data:
+
+networks:
+  crps-network:
+    driver: bridge 
