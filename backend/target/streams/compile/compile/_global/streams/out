@@ -1,16 +1,17 @@
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\darre\backend\conf\routes:12:1: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method predict,[0m
-[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
-[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function. [quickfixable][0m
-[0m[[0m[33mwarn[0m] [0m[0mGET     /api/predict                controllers.HomeController.predict[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\darre\backend\conf\routes:12:1: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method predict,[0m
-[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
-[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function. [quickfixable][0m
-[0m[[0m[33mwarn[0m] [0m[0mGET     /api/predict                controllers.HomeController.predict[0m
-[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
-[0m[[0m[0minfo[0m] [0m[0mAnnotation processing is enabled because one or more processors were found[0m
-[0m[[0m[0minfo[0m] [0m[0m  on the class path. A future release of javac may disable annotation processing[0m
-[0m[[0m[0minfo[0m] [0m[0m  unless at least one processor is specified by name (-processor), or a search[0m
-[0m[[0m[0minfo[0m] [0m[0m  path is specified (--processor-path, --processor-module-path), or annotation[0m
-[0m[[0m[0minfo[0m] [0m[0m  processing is enabled explicitly (-proc:only, -proc:full).[0m
-[0m[[0m[0minfo[0m] [0m[0m  Use -Xlint:-options to suppress this message.[0m
-[0m[[0m[0minfo[0m] [0m[0m  Use -proc:none to disable annotation processing.[0m
+[0m[[0m[31merror[0m] [0m[0mC:\FYP\backend\app\models\Models.scala:227:48: class PaginatedResponse takes type parameters[0m
+[0m[[0m[31merror[0m] [0m[0m  implicit val paginatedResponseFormat: Format[PaginatedResponse] = Json.format[PaginatedResponse][0m
+[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\FYP\backend\app\models\Models.scala:226:42: class ApiResponse takes type parameters[0m
+[0m[[0m[31merror[0m] [0m[0m  implicit val apiResponseFormat: Format[ApiResponse] = Json.format[ApiResponse][0m
+[0m[[0m[31merror[0m] [0m[0m                                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\FYP\backend\app\models\Models.scala:226:69: class ApiResponse takes type parameters[0m
+[0m[[0m[31merror[0m] [0m[0m  implicit val apiResponseFormat: Format[ApiResponse] = Json.format[ApiResponse][0m
+[0m[[0m[31merror[0m] [0m[0m                                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\FYP\backend\app\models\Models.scala:227:81: class PaginatedResponse takes type parameters[0m
+[0m[[0m[31merror[0m] [0m[0m  implicit val paginatedResponseFormat: Format[PaginatedResponse] = Json.format[PaginatedResponse][0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\FYP\backend\conf\routes:10:1: not found: value api[0m
+[0m[[0m[31merror[0m] [0m[0m->      /api/v1                           api.Routes[0m
+[0m[[0m[31merror[0m] [0m[0mC:\FYP\backend\conf\routes:10:1: not found: value api[0m
+[0m[[0m[31merror[0m] [0m[0m->      /api/v1                           api.Routes[0m
+[0m[[0m[31merror[0m] [0m[0m6 errors found[0m

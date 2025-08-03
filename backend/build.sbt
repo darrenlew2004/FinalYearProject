@@ -22,23 +22,11 @@ libraryDependencies ++= Seq(
   // Authentication
   "com.auth0" % "java-jwt" % "4.4.0",
 
-  // Database
-  "com.datastax.cassandra" % "cassandra-driver-core" % "4.17.0",
-  "com.datastax.cassandra" % "cassandra-driver-mapping" % "4.17.0",
-
-  // Machine Learning
-  "org.apache.spark" %% "spark-core" % "3.5.1",
-  "org.apache.spark" %% "spark-sql" % "3.5.1",
-  "org.apache.spark" %% "spark-mllib" % "3.5.1",
-
   // Data processing
   "org.apache.commons" % "commons-math3" % "3.6.1",
 
   // Logging
-  "ch.qos.logback" % "logback-classic" % "1.4.11",
-
-  // CORS
-  "com.typesafe.play" %% "play-cors" % "0.14.1"
+  "ch.qos.logback" % "logback-classic" % "1.4.11"
 )
 
 // Adds additional packages into Twirl

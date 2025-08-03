@@ -25,10 +25,29 @@ object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 
 Seq[Any](format.raw/*1.4*/("""
 
-"""),_display_(/*3.2*/main("Welcome to Play")/*3.25*/ {_display_(Seq[Any](format.raw/*3.27*/("""
-  """),format.raw/*4.3*/("""<h1>Welcome to Play!</h1>
-""")))}),format.raw/*5.2*/("""
-"""))
+"""),format.raw/*3.1*/("""<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Course Risk Prediction System</title>
+        <link rel="stylesheet" media="screen" href=""""),_display_(/*9.54*/routes/*9.60*/.Assets.versioned("stylesheets/main.css")),format.raw/*9.101*/("""">
+        <link rel="shortcut icon" type="image/png" href=""""),_display_(/*10.59*/routes/*10.65*/.Assets.versioned("images/favicon.png")),format.raw/*10.104*/("""">
+    </head>
+    <body>
+        <div id="root">
+            <h1>Course Risk Prediction System</h1>
+            <p>Backend API is running successfully!</p>
+            <p>API Endpoints:</p>
+            <ul>
+                <li><a href="/health">Health Check</a></li>
+                <li><a href="/api/v1/students">Students API</a></li>
+                <li><a href="/api/v1/courses">Courses API</a></li>
+            </ul>
+        </div>
+        <script src=""""),_display_(/*23.23*/routes/*23.29*/.Assets.versioned("javascripts/main.js")),format.raw/*23.69*/("""" type="text/javascript"></script>
+    </body>
+</html> """))
       }
     }
   }
@@ -45,9 +64,9 @@ Seq[Any](format.raw/*1.4*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/index.scala.html
-                  HASH: 571f46e69b9fc543f88ebd186b26f7e5e7a0cd9c
-                  MATRIX: 722->1|818->3|848->8|879->31|918->33|948->37|1005->65
-                  LINES: 21->1|26->1|28->3|28->3|28->3|29->4|30->5
+                  HASH: 1725955c6ed9db05985e44d9cda8ed3dca323311
+                  MATRIX: 722->1|818->3|848->7|1138->271|1152->277|1214->318|1303->380|1318->386|1379->425|1878->897|1893->903|1954->943
+                  LINES: 21->1|26->1|28->3|34->9|34->9|34->9|35->10|35->10|35->10|48->23|48->23|48->23
                   -- GENERATED --
               */
           

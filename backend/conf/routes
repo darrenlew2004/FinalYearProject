@@ -6,9 +6,6 @@
 # Health check
 GET     /health                           controllers.HealthController.health
 
-# API Routes
-->      /api/v1                           api.Routes
-
 # Home page
 GET     /                                 controllers.HomeController.index()
 

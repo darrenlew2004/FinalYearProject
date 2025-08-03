@@ -10,34 +10,43 @@ import _root_.controllers.Assets.Asset
 package controllers {
 
   // @LINE:7
-  class ReverseHomeController(_prefix: => String) {
+  class ReverseHealthController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
     // @LINE:7
+    def health: Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "health")
+    }
+  
+  }
+
+  // @LINE:13
+  class ReverseHomeController(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:13
     def index(): Call = {
       
       Call("GET", _prefix)
     }
   
-    // @LINE:12
-    def predict: Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "api/predict")
-    }
-  
   }
 
-  // @LINE:10
+  // @LINE:16
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:10
+    // @LINE:16
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))

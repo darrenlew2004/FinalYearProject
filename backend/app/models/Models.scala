@@ -223,6 +223,7 @@ object JsonFormats {
   implicit val loginRequestFormat: Format[LoginRequest] = Json.format[LoginRequest]
   implicit val registerRequestFormat: Format[RegisterRequest] = Json.format[RegisterRequest]
   implicit val authResponseFormat: Format[AuthResponse] = Json.format[AuthResponse]
-  implicit val apiResponseFormat: Format[ApiResponse] = Json.format[ApiResponse]
-  implicit val paginatedResponseFormat: Format[PaginatedResponse] = Json.format[PaginatedResponse]
+  
+  // Note: ApiResponse and PaginatedResponse are generic and need specific type parameters
+  // when used in actual API responses
 } 
