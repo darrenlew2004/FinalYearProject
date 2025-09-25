@@ -19,6 +19,12 @@ libraryDependencies ++= Seq(
   // JSON handling
   "com.typesafe.play" %% "play-json" % "2.9.4",
 
+  // Database & Evolutions
+  "com.typesafe.play" %% "play-jdbc" % "2.9.4",
+  "com.typesafe.play" %% "play-jdbc-evolutions" % "2.9.4",
+  "com.h2database" % "h2" % "2.2.224",
+  "org.playframework.anorm" %% "anorm" % "2.7.0",
+
   // Authentication
   "com.auth0" % "java-jwt" % "4.4.0",
 

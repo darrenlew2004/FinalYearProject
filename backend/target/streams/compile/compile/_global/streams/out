@@ -1,17 +1,13 @@
-[0m[[0m[31merror[0m] [0m[0mC:\FYP\backend\app\models\Models.scala:227:48: class PaginatedResponse takes type parameters[0m
-[0m[[0m[31merror[0m] [0m[0m  implicit val paginatedResponseFormat: Format[PaginatedResponse] = Json.format[PaginatedResponse][0m
-[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\FYP\backend\app\models\Models.scala:226:42: class ApiResponse takes type parameters[0m
-[0m[[0m[31merror[0m] [0m[0m  implicit val apiResponseFormat: Format[ApiResponse] = Json.format[ApiResponse][0m
-[0m[[0m[31merror[0m] [0m[0m                                         ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\FYP\backend\app\models\Models.scala:226:69: class ApiResponse takes type parameters[0m
-[0m[[0m[31merror[0m] [0m[0m  implicit val apiResponseFormat: Format[ApiResponse] = Json.format[ApiResponse][0m
-[0m[[0m[31merror[0m] [0m[0m                                                                    ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\FYP\backend\app\models\Models.scala:227:81: class PaginatedResponse takes type parameters[0m
-[0m[[0m[31merror[0m] [0m[0m  implicit val paginatedResponseFormat: Format[PaginatedResponse] = Json.format[PaginatedResponse][0m
-[0m[[0m[31merror[0m] [0m[0m                                                                                ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\FYP\backend\conf\routes:10:1: not found: value api[0m
-[0m[[0m[31merror[0m] [0m[0m->      /api/v1                           api.Routes[0m
-[0m[[0m[31merror[0m] [0m[0mC:\FYP\backend\conf\routes:10:1: not found: value api[0m
-[0m[[0m[31merror[0m] [0m[0m->      /api/v1                           api.Routes[0m
-[0m[[0m[31merror[0m] [0m[0m6 errors found[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\FYP\backend\app\controllers\AuthController.scala:33:18: symbol literal is deprecated; use Symbol("id") instead [quickfixable][0m
+[0m[[0m[33mwarn[0m] [0m[0m          """.on('id -> identifier).as((str("id") ~ str("username") ~ str("email") ~ str("password_hash") ~ str("role") ~ str("first_name") ~ str("last_name") ~ bool("is_active")).map {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                 ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\FYP\backend\app\controllers\StudentStatsController.scala:33:14: symbol literal is deprecated; use Symbol("uid") instead [quickfixable][0m
+[0m[[0m[33mwarn[0m] [0m[0m      """.on('uid -> userId).as(parser.singleOpt)[0m
+[0m[[0m[33mwarn[0m] [0m[0m             ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\FYP\backend\app\controllers\AuthController.scala:33:22: method namedWithSymbol in object NamedParameter is deprecated (since 2.7.0): Symbol is deprecated[0m
+[0m[[0m[33mwarn[0m] [0m[0m          """.on('id -> identifier).as((str("id") ~ str("username") ~ str("email") ~ str("password_hash") ~ str("role") ~ str("first_name") ~ str("last_name") ~ bool("is_active")).map {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                     ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\FYP\backend\app\controllers\StudentStatsController.scala:33:19: method namedWithSymbol in object NamedParameter is deprecated (since 2.7.0): Symbol is deprecated[0m
+[0m[[0m[33mwarn[0m] [0m[0m      """.on('uid -> userId).as(parser.singleOpt)[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mfour warnings found[0m
